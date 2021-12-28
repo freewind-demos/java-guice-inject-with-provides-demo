@@ -1,13 +1,19 @@
 package example;
 
 import com.google.inject.AbstractModule;
-import example.impl.MyHello1;
+import com.google.inject.Provides;
 
 public class MyModule extends AbstractModule {
 
   @Override
   protected void configure() {
-    bind(Hello1.class).to(MyHello1.class);
+    // other binds
+  }
+
+  @Provides
+  public Hello provideHello() {
+    // create a complex instance
+    return new Hello(100, 200, 300);
   }
 
 }

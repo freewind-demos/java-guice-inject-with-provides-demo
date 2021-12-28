@@ -1,13 +1,7 @@
-Java Guice Manual Inject Demo
+Java Guice Inject with Provides Demo
 =============================
 
-只使用了最简单的`@Inject`注解来声明，注入过程使用guice api手动操作，这是最原始的办法。
+当某个对象需要比较复杂的方式创建时，可以在Module里使用`@Provides`及相应方法来创建。
 
-注意：
-1. 如果某个需要Inject的类不是接口，直接是class，并且构造函数无参数，则不需要bind
+Run `example.Main` in your IDE
 
-Run `example.Main`, it will print:
-
-```
-Bill to Freewind, credit card: Paypal-CC-Freewind, transaction log: TL-Freewind
-```
